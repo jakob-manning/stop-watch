@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import StopWatch from "./StopWatch/StopWatch";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  componentDidMount() {
+    console.log('component mounted')
+  }
+
+  render(){
+    return (
+        <div className="App">
+        <StopWatch number={1}></StopWatch>
+        <StopWatch number={2}></StopWatch>
+        <StopWatch number={3}></StopWatch>
+        </div>
+    )
+  }
 }
 
 export default App;
